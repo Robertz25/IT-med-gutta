@@ -1,0 +1,184 @@
+Intro:
+
+Obligatorisk oppgave er en gruppeoppgave som er en del av mappeinnleveringen og teller mot sluttkarakter.
+
+Oppgavene skal løses og lastes opp på Github.
+Oppgavene skal besvares i en .md (markdown) fil.
+
+1. Fyll ut manglende tall i tabell
+Binære tall (mest signifikant bit til venstre
+
+Hexadesimaltall
+
+Desimaltall
+
+1101
+
+0xD
+
+13
+
+110111101010
+
+ 
+
+ 
+
+ 
+
+0xAF34
+
+ 
+
+ 
+
+ 
+
+65535
+
+ 
+
+ 
+
+71562
+
+Oppgave A
+Beskriv kort metode for å gå fra binære tall til hexadesimale tall og motsatt. Beskriv kort metoden for å gå fra binære tall til desimaltall og motsatt.
+
+Oppgave B
+Beskriv kort metoden for å gå fra hexadesimale tall til desimaltall og motsatt.
+
+ 
+
+2. Forstå algoritmer og utføre “benchmark”-tester på koden
+Programmeringsoppgave: - ta utgangspunkt i pakken algorithms i oblig1
+
+Oppgave A
+Skriv en modifisert bubble-sort funksjon benchmarkBSortModified basert på eksempel-funksjon Bubble_sort i filen sorting.go (se for tips)
+
+Oppgave B
+Skriv "benchmark"-tester for benchmarkBSortModified funksjonen basert på eksempel-funksjon benchmarkBSort i filen go
+
+Oppgave C
+Det finnes også en implementasjon av Quicksort algoritme i sorting.go og tilsvarende implementasjon av tester i go; utfør alle benchmark- testene med kommando “go test -bench=.” og presenter resultatene grafisk
+
+Hva kan du si om big-O for alle 3 algoritmene, som du har testet?
+
+ 
+
+Ressurser:
+
+Bubble sort: https://en.wikipedia.org/wiki/Bubble_sort
+
+Big-O http://bigocheatsheet.com  
+
+ 
+
+3. Forstå prosessadministrajon på et platform
+Skriv et program som består av en evig løkke. Hvor mye minne og CPU bruker programmet når det kjører. Programmet skal skrive ut en avslutningsmeld- ing når programmet mottar et SIGINT signal. Generer ulike avslutningssig- naler til prosessen og dokumenter hvilke avslutningskommandoer programmet håndterer og som trigger avslutningsmeldingen.
+
+Ressurs: 
+https://en.wikipedia.org/wiki/Signal_(IPC)
+
+ 
+
+ 
+
+4. Typografiske symboler
+Formål:
+
+Bli kjent med ISO/IEC 8859 serier for 8-bits koding av typografiske sym- boler.
+Illustrere forskjell på ASCII og utvidet ASCII kode gjennom golang ram- meverk for behandling av tekststrenger (på engelsk brukes det nesten alltid begrepet “strings” for tekststrenger).
+Hva trenger du å vite for å klare denne oppgaven:
+
+du må forstå “slices” i golang
+at de første 256 “code points” (kodepunkter, som tilsvarer typen “rune” i golang, varierer fra platform til platform og fra program til program; det finnes 15 forskjellige deler av ISO/IEC 8859 serier for 8-bits koder)
+ 
+
+Oppgave A
+Bruk filen ascii.go i Oblig1 mappen og lag en funksjon som itererer (går i en løkke over)  over tegn med byte-verdier fra 0x80 til 0xFF, dvs. det utvidede ASCII settet.
+
+Kravspesifikasjon
+Funksjonsnavn skal være iterateOverExtendedASCIIStringLiteral(...) og den skal ta et argument,  som skal være av  type string (“string literal”).   Dere   må generere / deklarere en string med alle de 128 heksadesimale verdiene ( “\x80\x81. . . \xFF” ) som funksjonen kan ta som argument. Funksjonen trenger ikke å returnere noe eksplisitt.
+
+Utskriftsformatet skal være følgende:
+
+[utvidet-ascii-kode heksadesimalt med store bokstaver A-F][mellomrom][symbol for utvidet-ascii-kode] [mellomrom][utvidet-ascii-kode binært][linjeskift]
+
+Eksempel :
+
+3E
+
+ >
+
+111110
+
+BA
+
+ º
+
+10111010
+
+BB
+
+ »
+
+10111110
+
+BF
+
+¿
+
+10111111
+
+C0
+
+À
+
+11000000
+
+C1
+
+Á
+
+11000001
+
+ 
+
+. . .
+
+ 
+
+ 
+
+analyser utskriften (spesielt for bytes fra 0x80 til 0x9F)
+utfør programmet på alle gruppemedlemmers datamaskin og analyser
+ 
+
+Oppgave B
+Lag en funksjonen ExtendedASCIIText () i samme filen iso.go, som skriver ut: " € ÷ ¾ dollar "
+
+Kravspesifikasjon
+Funksjonen skal generere en utskrift fra en sekvens av bytes, dvs. av typen []bytes (det betyr at du må finne den heksadesimale eller binære representasjonen av alle tegn i strengen, som skal skrives ut (inkludert anførselstegn eller “double quotes” på engelsk).
+Funksjonen ExtendedASCIIText () skal returnere en variabel av typen string, som inneholder tegn fra Extended
+Utfør programmet på forskjellige platformer(mac,windows,linux) eller forskjellig software(terminal, bash, powershell) og analyser resultater
+ 
+
+Oppgave C
+Implementer en test for funksjonen ExtendedASCIIText(String) i egen fil iso_test.go, som tester om input-verdier (av type string) inneholder kun tegn fra en Extended ASCII.
+
+ 
+
+Ressurser:
+
+Runes: https://en.wikipedia.org/wiki/Runes
+
+ASCII Table: http://www.asciitable.com/
+
+Golang Stings, Bytes, Runes og Characters https://blog.golang.org/strings
+
+Golang FMT package: https://golang.org/pkg/fmt/
+
+Golang Bytes package: https://golang.org/pkg/bytes/
+
+Golang Slices: https://blog.golang.org/slices
