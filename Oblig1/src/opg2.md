@@ -16,6 +16,7 @@
 	}
   
   **Oppgave 2b**
+  
   **Forstå algoritmer og utføre “benchmark”-tester på koden**
   
   func BenchmarkBSortModified100(b *testing.B) {
