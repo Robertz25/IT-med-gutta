@@ -1,6 +1,6 @@
 # IT-med-gutta
 just another repository
-Oppgave 3.1 - OppgaveSett 1:
+**Oppgave 3.1 - OppgaveSett 1:**
 Finn ut hva  objektfiler heter for de mest brukte platformene (Unix/Linux, MS Windows, Mac OS X)! Hvorfor, etter din mening, har disse platformene så forskjellige objektfil-formater?:
 
 Unix / Linux: ELF, (avhengig av build)
@@ -9,7 +9,7 @@ Mac OS X: Mach-O
 
 Disse platformene har så forskjellige objektfil-formater fordi de har ulike måter å lese og kalle på binære tallkoder. 
 
-Oppgave 3.2 - OppgaveSett 1:
+**Oppgave 3.2 - OppgaveSett 1:**
 Gå gjennom https://tour.golang.org/basics/1 Hvilke forskjeller ser du i forhold til programmeringsspråket Java? (forutsetter at alle er kjent med Java, hvis ikke, så kan man også sammenligne med andre programmeringsspråk):
 
 I Golang brukes ikke nøkkelordene som Public og Private. Funksjoner har stor forbokstav.
