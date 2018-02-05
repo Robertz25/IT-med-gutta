@@ -19,6 +19,7 @@
   
   **Forstå algoritmer og utføre “benchmark”-tester på koden**
   
+  ```
   func BenchmarkBSortModified100(b *testing.B) {
 	benchmarkBSortModified(100, b)
 }
@@ -38,8 +39,10 @@ func benchmarkBSortModified(i int, b *testing.B) {
 		b.StartTimer()
 		Bubble_sort_modified(values)
     }
-    
-**Oppgave 3c**
+ 
+ ```
+**Oppgave 2c**
+
 ```
 BenchmarkBSortModified100-4                30000             41181 ns/op
 BenchmarkBSortModified1000-4                 500           2656742 ns/op
