@@ -50,3 +50,6 @@ BenchmarkBSort10000-4                          5         298664220 ns/op
 BenchmarkQSort100-4                       200000              8549 ns/op
 BenchmarkQSort1000-4                       10000            115897 ns/op
 BenchmarkQSort10000-4                       1000           1473063 ns/op
+
+27.752s
+
