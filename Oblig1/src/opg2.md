@@ -37,7 +37,7 @@ func benchmarkBSortModified(i int, b *testing.B) {
 		values := perm(i)
 		b.StartTimer()
 		Bubble_sort_modified(values)
-    }
+	}
 ```
 **Oppgave 3c**
 
