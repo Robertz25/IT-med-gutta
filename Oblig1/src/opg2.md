@@ -1,5 +1,4 @@
-Oppgave 2
-a) 
+**Oppgave 2a** 
 
 	func Bubble_sort_modified(list []int) {
 	n := len(list)
@@ -16,7 +15,8 @@ a)
 	}
 	}
   
-  b) Forstå algoritmer og utføre “benchmark”-tester på koden
+  **Oppgave 2b**
+  **Forstå algoritmer og utføre “benchmark”-tester på koden**
   
   func BenchmarkBSortModified100(b *testing.B) {
 	benchmarkBSortModified(100, b)
