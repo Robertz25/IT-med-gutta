@@ -55,3 +55,7 @@ BenchmarkQSort1000-4                       10000            115897 ns/op
 BenchmarkQSort10000-4                       1000           1473063 ns/op
 
 27.752s
+```
+Det vi kan si om big-O for alle 3 algoritmene som vi har testet er at space complexity er større eller verre for BubbleSort og BubbleSortModified, enn QuickSort. For de tre forskjellige testene med ulike elementer ser vi at QuickSort kjører gjennom langt flere looper enn BubbleSortene. Samme gjelder for time complexity der QuickSort går gjennom hver loop mye raskere, med for eksempel 8549 millisekund per loop med 100 elementer, mens Bubblesort bruker 37841 millisekund per loop.
+
+Hvis vi ser på tabellen over Array Sorting Algorithms på: http://bigocheatsheet.com kan vi se at generelt presterer QuickSort algoritmen bedre enn BubbleSorten. Jo flere operasjoner og elementer vi får vil begge prestere dårligere, men QuickSort ser ut til å være bedre sammenlignet med BubbleSort.
