@@ -1,0 +1,51 @@
+Oppgave 2
+a) 
+
+	func Bubble_sort_modified(list []int) {
+	n := len(list)
+	swapped := true
+	for swapped {
+	swapped = false
+	for i := 1; i < n-1; i++ {
+	if list[i-1] > list[i] {
+
+	list[i], list[i-1] = list[i-1], list[i]
+	swapped = true
+	}
+	}
+	}
+	}
+  
+  b) Forstå algoritmer og utføre “benchmark”-tester på koden
+  
+  func BenchmarkBSortModified100(b *testing.B) {
+	benchmarkBSortModified(100, b)
+}
+
+func BenchmarkBSortModified1000(b *testing.B) {
+	benchmarkBSortModified(1000, b)
+}
+
+func BenchmarkBSortModified10000(b *testing.B) {
+	benchmarkBSortModified(10000, b)
+}
+
+func benchmarkBSortModified(i int, b *testing.B) {
+	for j := 0; j < b.N; j++ {
+		b.StopTimer()
+		values := perm(i)
+		b.StartTimer()
+		Bubble_sort_modified(values)
+    }
+
+
+
+BenchmarkBSortModified100-4                30000             41181 ns/op
+BenchmarkBSortModified1000-4                 500           2656742 ns/op
+BenchmarkBSortModified10000-4                  3         340763500 ns/op
+BenchmarkBSort100-4                        30000             37841 ns/op
+BenchmarkBSort1000-4                        1000           2077786 ns/op
+BenchmarkBSort10000-4                          5         298664220 ns/op
+BenchmarkQSort100-4                       200000              8549 ns/op
+BenchmarkQSort1000-4                       10000            115897 ns/op
+BenchmarkQSort10000-4                       1000           1473063 ns/op
