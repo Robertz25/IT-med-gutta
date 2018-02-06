@@ -34,7 +34,7 @@ Den enkleste måten å gå fra hexadesimalt tall til et binært tall er ved å s
 For å gå fra binære tall til desimale tall, må man gange sifferet (som består av kun sifrene 0 og 1) med grunntallet 2 opphøyet i sifferets posisjon. Deretter må man addere med neste tall i rekken. Det kan se slik ut. 101 -> (1*2^2) + (0*2^1) + (1*2^0). Vi legger sammen: 4 + 0 + 1 = 5. Som vi ser i det binære tallet 101, er det tre posisjoner. Årsaken til at tallet helt til venstre er opphøyet i 2 i stedet for 3, er fordi sifferet helt til høyre står i tallrekke 0.
 Om x = 1 eller 0, og 0-te desimal posisjon er lik n, kan regningen skrives slik: …(x * 2^n+1) + (x * 2^n)
 
-Binært tall (101001), omgjøres til desimal slik, 1*2^5 + 0*2^4 + 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 =    32 + 0 + 8 + 0 + 0 + 1 = 41.
+Binært tall (101001), omgjøres til desimal slik, 1x2^5 + 0x2^4 + 1x2^3 + 0x2^2 + 0x2^1 + 1x2^0 =    32 + 0 + 8 + 0 + 0 + 1 = 41.
 
 **Desimale tall til binære tall:**
 
