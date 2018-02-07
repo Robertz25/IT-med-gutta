@@ -1,9 +1,11 @@
 **3. Forstå prosessadministrajon på et platform**
-Evig løkke -
 
+Evig løkke:
+```
 package main
 
 func main() {
 	for {
 	}
 }
+```
