@@ -11,26 +11,73 @@ Fra bytes fra 0x80 til 0x9F (128 til 159, desimalverdi) får vi ikke opp symbole
 
 **Oppgave 4b**
 ```
-func main(){
-	asciiByteSlice := []byte(asciiNR1)
-	fmt.Printf("%s", ExtendedASCIIText(asciiByteSlice))
+package main
+
+import "fmt"
+
+func ExtendedAsciiText(x string) string {
+	r := make([]rune, len(x))
+	for i := 0; i < len(x); i++ {
+		r[i] = cp1252[x[i]]
+	}
+	return string(r)
 }
 
-func ExtendedASCIIText(s []byte)string{
-	var asciiNR1 = string(s)
-	return asciiNR1
+
+func main() {
+	x := "\x80\xf7\xbe dollar"
+	str := ExtendedAsciiText(x)
+	fmt.Printf("%q\n", str)
 }
-```
-Dersom vi tar å kjører i kommandovinduet:
-```
-C:\Users\herma\go\src>go run Sorting.go
-C:\Users\herma\go\src>€ ÷ ¾ dollar
 
-'€' is not recognized as an internal or external command,
-operable program or batch file.
+func init() {
+	for i, r := range cp1252 {
+		if r == 0 {
+			cp1252[i] = rune(i)
+		}
+	}
+}
+
+var cp1252 = [255]rune {
+	0x80: '\u20AC', // EURO SIGN
+	0x81: '\uFFFD', // UNDEFINED
+	0x82: '\u201A', // SINGLE LOW-9 QUOTATION MARK
+	0x83: '\u0192', // LATIN SMALL LETTER F WITH HOOK
+	0x84: '\u201E', // DOUBLE LOW-9 QUOTATION MARK
+	0x85: '\u2026', // HORIZONTAL ELLIPSIS
+	0x86: '\u2020', // DAGGER
+	0x87: '\u2021', // DOUBLE DAGGER
+	0x88: '\u02C6', // MODIFIER LETTER CIRCUMFLEX ACCENT
+	0x89: '\u2030', // PER MILE SIGN
+	0x8A: '\u0160', // LATIN CAPITAL LETTER S WITH CARON
+	0x8B: '\u2039', // SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+	0x8C: '\u0152', // LATIN CAPITAL LIGATURE OE
+	0x8D: '\uFFFD', // UNDEFINED
+	0x8E: '\u017D', // LATIN CAPITAL LETTER Z WITH CARON
+	0x8F: '\uFFFD', // UNDEFINED
+	0x90: '\uFFFD', // UNDEFINED
+	0x91: '\u2018', // LEFT SINGLE QUOTATION MARK
+	0x92: '\u2019', // RIGHT SINGLE QUOTATION MARK
+	0x93: '\u201C', // LEFT DOUBLE QUOTATION MARK
+	0x94: '\u201D', // RIGHT DOUBLE QUOTATION MARK
+	0x95: '\u2022', // BULLET
+	0x96: '\u2013', // EN DASH
+	0x97: '\u2014', // EM DASH
+	0x98: '\u02DC', // SMALL TILDE
+	0x99: '\u2122', // TRADE MARK SIGN
+	0x9A: '\u0161', // LATIN SMALL LETTER S WITH CARON
+	0x9B: '\u203A', // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+	0x9C: '\u0153', // LATIN SMALL LIGATURE OE
+	0x9D: '\uFFFD', // UNDEFINED
+	0x9E: '\u017E', // LATIN SMALL LETTER Z WITH CARON
+	0x9F: '\u0178', // LATIN CAPITAL LETTER Y WITH DIAERESIS
+}
+
+C:\Users\herma\go\src>go run test.go
+"€÷¾ dollar"
 
 ```
-Vi får meldingen at den ikke kjenner igjen "€" tegnet.
+Som vi ser får vi skrevet ut €÷¾ dollar. Som vi ser under var cp1252 = [255]rune, er det listet mange forskjellige tegn fra extended ASCII, vi behøver kun den øverste (0x80) egentlig. Disse tre tegnene: €÷¾ tilhører extended ASCII, men ÷¾ kan vi fortsatt bruke siden de er matematiske symboler.
 
 **Oppgave 4c**
 ```
