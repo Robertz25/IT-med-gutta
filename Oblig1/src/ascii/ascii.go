@@ -31,7 +31,7 @@ func init() {
 }
 
 var cp1252 = [255]rune{
-	0x80: '\u20AC', // EURO SIGN
+	0x80: '\u20AC', // EURO SIGN  , behøver kun denne for 4b.
 	0x81: '\uFFFD', // UNDEFINED
 	0x82: '\u201A', // SINGLE LOW-9 QUOTATION MARK
 	0x83: '\u0192', // LATIN SMALL LETTER F WITH HOOK
