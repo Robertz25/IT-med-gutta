@@ -16,7 +16,7 @@ I Golang brukes ikke nøkkelordene som Public og Private. Funksjoner har stor fo
 Det brukes heller ikke semikolon. En kan bruke det hvis man vil, men man må ikke i motsetning til Java.
 Variabeldeklarasjon, i Java må man spesifisere: f.eks int 50. I Golang derimot antar kompilatoren datatypen dersom det ikke er blitt definert på forhånd, fks x = 100 (int).
 
-<h1>Obligatorisk oppgave 2</h>
+# Obligatorisk oppgave 2 #
 
 **Link til første oppgave:**
 
