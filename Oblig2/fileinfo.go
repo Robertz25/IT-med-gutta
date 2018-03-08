@@ -16,12 +16,12 @@ func main() {
 	}
 
 	//Get datasize
-	datasize, err := ioutil.ReadFile("fileinfo.go")
+	size, err := ioutil.ReadFile("fileinfo.go")
 	if err != nil{
 		log.Panicf("failed at reading data from file: %s", err)
 	}
-	fmt.Printf("Size: %d bytes\n", len(datasize))
-	i := len(datasize)
+	fmt.Printf("Size: %d bytes\n", len(size))
+	i := len(size)
 	f := float64(i)
 	fmt.Printf("Size: %f Kilobytes\n", f/1e3)
 	fmt.Printf("Size: %f Megabytes\n", f/1e6)
