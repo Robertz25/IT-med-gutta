@@ -20,10 +20,14 @@ Variabeldeklarasjon, i Java må man spesifisere: f.eks int 50. I Golang derimot 
 
 **Link til første oppgave:**
 
+
 [Oppgave 1, fileinfo.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/fileinfo.go/)
+
 
 **Link til andre oppgave:**
 
+
 [Oppgave 2, filecount.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/filecount.go)
+
 
 **Link til tredje oppgave:**
