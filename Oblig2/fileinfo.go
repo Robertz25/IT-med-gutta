@@ -15,7 +15,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	//Get datasize
+	//Get size
 	size, err := ioutil.ReadFile("fileinfo.go")
 	if err != nil{
 		log.Panicf("failed at reading data from file: %s", err)
