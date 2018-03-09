@@ -40,6 +40,6 @@ Variabeldeklarasjon, i Java må man spesifisere: f.eks int 50. I Golang derimot 
 
 [Oppgave 3a, addup.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/addup.go)
 
-[Oppgave 3b, addtofile.go] (https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/addtofile.go)
+[Oppgave 3b, addtofile.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/addtofile.go)
 
-[Oppgave 3b, sumfromfile.go] (https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/sumfromfile.go)
+[Oppgave 3b, sumfromfile.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/sumfromfile.go)
