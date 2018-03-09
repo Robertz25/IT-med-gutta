@@ -9,13 +9,18 @@ import (
 
 func main() {
 
+
+
+	fmt.Printf("Information about <fileinfo.go>: \n")
+
 	file, err := os.Open("fileinfo.go")
 	if err != nil {
 		fmt.Printf("couldn't open file: %s\n", err)
 		os.Exit(1)
 	}
 
-	//Get size
+ 	//Get size
+
 	size, err := ioutil.ReadFile("fileinfo.go")
 	if err != nil{
 		log.Panicf("failed at reading data from file: %s", err)
