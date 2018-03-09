@@ -3,15 +3,10 @@ package main
 import (
 
 	"fmt"
-
 	"strings"
-
 	"io/ioutil"
-
 	"log"
-
 	"sort"
-
 	"os"
 	"bufio"
 )
@@ -19,7 +14,6 @@ import (
 func main() {
 
 	fmt.Println("Information about <filecount.go>: \n")
-
 
 	file, _ := os.Open("text.txt")
 	fileScanner := bufio.NewScanner(file)
@@ -88,9 +82,6 @@ func main() {
 			fmt.Printf("%d. Rune: %s, counts: %d\n", counter + 1, string(kv.Key), kv.Value)
 
 		}
-
 		counter++
-
 	}
-
 }
