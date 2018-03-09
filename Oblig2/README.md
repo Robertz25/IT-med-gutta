@@ -31,6 +31,7 @@
 
 [Oppgave 3b, sumfromfile.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/sumfromfile.go)
 
-Oppgace 3d: Sigint i opg a.
+Oppgave 3d: Sigint i opg a.
 
+Oppgave 3e: I kommandovinduet (cmd) skrives kommandoen go build <filnavn.go> f.eks go build fileinfo.go. Da gjør man det om til en exe (executable) fil. Dette gjør det mulig å execute eller kjøres av et program.
 [Oppgave 3e, bin mappe](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/bin)
