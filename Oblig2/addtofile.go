@@ -21,11 +21,10 @@ func addtofile() {
 	var tall1 int
 	var tall2 int
 
-	//I terminal så skriver brukeren inn 2 tall, nummer 1 & nummer 2
 	fmt.Println("Skriv inn et tall: ")
 	fmt.Scan(&tall1)
 	if tall2 <= 0 {
-		fmt.Println("Error, du må skrive inn et tall, eller et tall som er høyere enn 0")
+		fmt.Println("Feil, du må skrive inn et tall som er høyere enn 0")
 	}
 	fmt.Println("Skriv inn et tall: ")
 	fmt.Scan(&tall2)
