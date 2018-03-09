@@ -30,3 +30,7 @@
 [Oppgave 3b, addtofile.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/addtofile.go)
 
 [Oppgave 3b, sumfromfile.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/sumfromfile.go)
+
+Oppgace 3d: Sigint i opg a.
+
+[Oppgave 3e, bin mappe](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/bin)
