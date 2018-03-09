@@ -4,13 +4,13 @@ import (
 
 	"fmt"
 	"time"
-
 	"os"
 	"os/signal"
 	"syscall"
 )
 
 func main() {
+
 
 	c := make(chan int)
 
@@ -50,7 +50,7 @@ func readInput(c chan int) {
 
 	sum := <-c // mottar sum / resultat ifra channel
 
-	fmt.Println("Resultat: ", sum)
+	fmt.Println("Resultat: ", sum , ".\t Ctrl c - for å avslutte ")
 
 
 }
