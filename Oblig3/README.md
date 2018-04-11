@@ -12,6 +12,7 @@
 [Oppgave 1, main.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig3/Oppgave1/Oppgave1/main.go)
 
 ![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig3/Oppgave1/Oppgave1/op1_3.png)
+
 ![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig3/Oppgave1/Oppgave1/opg1_ob3.png)
 
 **Link til andre oppgave:**
