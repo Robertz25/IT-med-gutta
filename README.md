@@ -5,7 +5,7 @@
 
 **Håkon Sveen - hakon_s_s@hotmail.com**
 
-just another repository from the OUUUFboys
+Ouufbois repository
 **Oppgave 3.1 - OppgaveSett 1:**
 Finn ut hva  objektfiler heter for de mest brukte platformene (Unix/Linux, MS Windows, Mac OS X)! Hvorfor, etter din mening, har disse platformene så forskjellige objektfil-formater?:
 
