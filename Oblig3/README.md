@@ -18,9 +18,13 @@
 **Link til andre oppgave:**
 
 
+[Oppgave 2, folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave2)
+
 [Oppgave 2, opg2.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig3/Oppgave2/opg2.go)
 
-[Oppgave 2, folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave2)
+[Oppgave 2, bilder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave2/bilder)
+
+
 
 
 
