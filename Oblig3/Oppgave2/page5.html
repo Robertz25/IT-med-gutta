@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page5</title>
+</head>
+<body>
+
+<style>
+    body {background-color: lightgrey;}
+</style>
+
+<b><i>Page five</i></b>
+
+<ul>{{range .Entries}}
+
+    <!-- Har ikke tatt med alle elementene fra structen, for at det skal se mindre og finere ut. -->
+
+    <p><li>Tvangsavvikling: {{.Tvangsavvikling}}, Regnskap: {{.Regnskap}}, tlf: {{.TlfMobil}}
+    , Organisasjonsform: {{.Organisasjonsform}},  Konkurs: {{.Konkurs}}</li></p>
+
+{{end}}</ul>
+
+</body>
+</html>
