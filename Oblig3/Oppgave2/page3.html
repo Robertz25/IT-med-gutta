@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page3</title>
+</head>
+<body>
+
+<style>
+    body {background-color: lightgrey;}
+</style>
+
+<b><i>Page three</i></b>
+
+<ul>{{range .Entries}}
+
+    <!-- Har ikke tatt med alle elementene fra structen, for at det skal se mindre og finere ut. -->
+
+    <p><li>Area: {{.Area}}, AdressLine: {{.AddressLine}}, PollingPlaceID: {{.PollingPlaceID}}
+    , CountyName: {{.CountyName}}, PollingplaceName: {{.PollingPlaceName}}
+    , MunicipalityID: {{.MunicipalityID}}, MunicipalityName: {{.MunicipalityName}}
+    , Info: {{.InfoText}}</li></p>
+
+{{end}}</ul>
+
+
+</body>
+</html>
