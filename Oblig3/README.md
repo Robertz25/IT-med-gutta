@@ -18,7 +18,7 @@
 **Link til andre oppgave:**
 
 
-[Oppgave 2, -kommer snart-](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/filecount.go)
+[Oppgave 2, opg2.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig3/Oppgave2/opg2.go)
 
 
 
