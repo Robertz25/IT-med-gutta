@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+</head>
+<body>
+
+<style>
+    body {background-color: lightgrey;}
+</style>
+
+<b><i>Page one</i></b>
+
+
+<ul>{{range .Entries}}
+
+<p><li>Latitude: {{.Latitude}}, Navn: {{.Navn}}, Plast: {{.Plast}}
+    , Glass_metall: {{.Glass_metall}}, Tekstil_sko: {{.Tekstil_sko}}
+    , Longitude: {{.Longitude}}</li></p>
+
+{{end}}</ul>
+
+</body>
+</html>
