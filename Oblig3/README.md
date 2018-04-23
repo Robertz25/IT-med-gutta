@@ -30,7 +30,7 @@
 
 **Link til tredje oppgave:**
 
-[Oppgave 3, -kommer snart-](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig2/addup.go)
+[Oppgave 3, folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave3)
 
 
 
