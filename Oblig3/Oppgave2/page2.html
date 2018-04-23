@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page2</title>
+</head>
+<body>
+
+<style>
+    body {background-color: lightgrey;}
+</style>
+
+<b><i>Page two</i></b>
+
+
+<ul>{{range .Entries}}
+
+   <p><li>Kommune: {{.Kommune}}, Fylke: {{.Fylke}}, Navn: {{.Navn}}</li></b>
+
+{{end}}</ul>
+
+</body>
+</html>
