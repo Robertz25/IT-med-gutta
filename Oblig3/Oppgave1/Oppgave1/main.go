@@ -18,7 +18,7 @@ func CheckError(err error) {
 func HelloServer(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprint(w, "Hello, client\n")
 }
-
+//-IT-med-gutta , <-- herman, håkon og robert, copyright.
 func main() {
 
 	http.HandleFunc("/", HelloServer)
