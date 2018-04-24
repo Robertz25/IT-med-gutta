@@ -37,6 +37,7 @@ func handleUDPConnection(conn *net.UDPConn) {
 
 }
 
+//-IT-med-gutta , <-- herman, håkon og robert, copyright.
 func main() {
 	hostName := "localhost"
 	portNum := "17"
