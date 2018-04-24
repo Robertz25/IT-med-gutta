@@ -39,7 +39,7 @@ func handleUDPConnection(conn *net.UDPConn) {
 
 func main() {
 	hostName := "localhost"
-	portNum := "6000"
+	portNum := "17"
 	service := hostName + ":" + portNum
 
 	udpAddr, err := net.ResolveUDPAddr("udp4", service)
@@ -55,7 +55,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("UDP server up and listening on port 6000")
+	fmt.Println("UDP server up and listening on port 17")
 
 	defer ln.Close()
 
