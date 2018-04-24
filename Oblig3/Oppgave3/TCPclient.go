@@ -1,38 +1,23 @@
 package main
 
 import (
-	"fmt"
 	"net"
-	"time"
-	"strconv"
+	"io/ioutil"
+	"log"
+	"fmt"
 )
 
-func CheckError(err error) {
-	if err  != nil {
-		fmt.Println("Error: " , err)
-	}
-}
 
 func main() {
-	ServerAddr,err := net.ResolveUDPAddr("tcp","127.0.0.1:10001")
-	CheckError(err)
-
-	LocalAddr, err := net.ResolveUDPAddr("tcp", "127.0.0.1:0")
-	CheckError(err)
-
-	Conn, err := net.DialUDP("tcp", LocalAddr, ServerAddr)
-	CheckError(err)
-
-	defer Conn.Close()
-	i := 0
-	for {
-		msg := strconv.Itoa(i)
-		i++
-		buf := []byte(msg)
-		_,err := Conn.Write(buf)
-		if err != nil {
-			fmt.Println(msg, err)
-		}
-		time.Sleep(time.Second * 1)
+	conn, err := net.Dial("tcp", "localhost:8080")
+	if err!= nil {
+		panic (err)
 	}
+	defer conn.Close()
+
+	bs, err := ioutil.ReadAll (conn)
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Println(string(bs))
 }
