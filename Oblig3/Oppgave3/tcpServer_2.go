@@ -6,6 +6,7 @@ import (
 	"log"
 )
 
+//-IT-med-gutta , <-- herman, håkon og robert, copyright.
 func main(){
 	fmt.Println("Server listening on 8080")
 	listener, err := net.Listen("tcp", "localhost:8080")
