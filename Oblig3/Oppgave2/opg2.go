@@ -17,7 +17,7 @@ func init() {
 	tpl = template.Must(template.ParseGlob("templates/*")) // bruker ParsbGlob fordi vi bruker en mappe
 }
 
-
+//-IT-med-gutta , <-- herman, håkon og robert, copyright.
 func main(){
 
 	http.HandleFunc("/", helloClient) // <- path, opg1
@@ -149,7 +149,7 @@ func page5(w http.ResponseWriter, r *http.Request) {
 }
 
 
-//struct for func page1.
+//struct for func page1. 
 type Miljostasjoner struct {
 	Entries  []struct {
 		Latitude     string `json:"latitude"`
