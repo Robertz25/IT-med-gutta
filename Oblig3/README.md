@@ -31,6 +31,7 @@
 **Link til tredje oppgave:**
 
 [Oppgave 3, folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave3)
+[Oppgave 3, bilder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig3/Oppgave3/Bilder)
 
 
 
