@@ -6,6 +6,7 @@ import (
 	"net"
 	"bufio"
 )
+//-IT-med-gutta , <-- herman, håkon og robert, copyright.
 func main() {
 	li, err := net.Listen("tcp", ":8080")
 	if err != nil {
