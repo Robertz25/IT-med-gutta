@@ -10,4 +10,5 @@ På obligatorisk oppgave 4 har vi valgt å lage et program som sammenligner temp
 Byene vi har valgt å sammenligne er Ålesund, Tromsø og Stavanger. For å få tak i API til de ulike stedene brukte vi openweathermap.org. Der måtte vi lage en bruker for å få en egen API key som kunne brukes til å hente API for forskjellige steder. 
 
 **Link til oppgaven**
+
 "link til oppgaven her"
