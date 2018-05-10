@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+        .tablink {
+            background-color: blue;
+            color: white;            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 18px 16px;
+            font-size: 17px;
+            width: 33.333%;
+        }
+        .tablink:hover {
+            background-color: whitesmoke;
+        }
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+        #Stavanger {background-color: dodgerblue;}
+    </style>
+</head>
+<body>
+
+
+<button class="tablink" onclick="location.href='/1';" value="Alesund">Ålesund</button>
+<button class="tablink" onclick="location.href='/2';" value="Tromso">Tromsø</button>
+<button class="tablink" onclick="openPage('Stavanger', this, 'cornflowerblue')" id="defaultOpen">Stavanger</button>
+
+<div id="Stavanger" class="tabcontent">
+    <h1><center><font color="#ffd700"> Værmelding  {{ .Name }}</font></center></h1>
+    <p><center> Temperatur {{ .Main.Temp }}°C Grader </center></p>
+    <p><center>Lufttrykket er {{ .Main.Pressure }} kPa</center></p>
+    <p><center>Luftfuktigheten er {{ .Main.Humidity }} %</center></p>
+    <p><center>Vindhastigheten er {{ .Wind.Speed }} m/s</center></p>
+    <p><center> Dagens melding: {{ .Main.TempC }} </center></p>
+
+    <center>
+        <style> .weathertile {width:98%;display:inline;float:left;font-size:35px;margin-left:1%;margin-bottom:1px;padding:5px;text-align:center;} #tileframe{width:100%;height:290px;overflow:hidden;scroll:none;} .qx{display:none;} </style><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/><div id="tileframe"></div><div class="qx"><small><a href="http://weather-widget.com">weather-widget.com</a></small></div><script>var requestString = "http://api.openweathermap.org/data/2.5/forecast?q=4018,NO&cnt=2&lang=en&APPID=12576bc04cecb325c71bbe3972592fa1"; var request = new XMLHttpRequest(); request.open("get", requestString, true); request.send(); request.onload = function(){if (request.status===200) { var html=""; var results = JSON.parse(request.responseText); if (results.list.length > 0) { for (var i = 0; i < results.list.length; i++) {var name = results.city.name +", "+results.city.country; var temp = Math.round(10*(results.list[i].main.temp -273.15))/10; var tmin = Math.round(10*(results.list[i].main.temp_min -273.15))/10; var tmax = Math.round(10*(results.list[i].main.temp_max -273.15))/10; var text = results.list[i].weather[0].description; var img =  "http://openweathermap.org/img/w/" +results.list[i].weather[0].icon + ".png"; var tijd = results.list[i].dt_txt; 	var jaar = tijd.substring(0,4); var maand = tijd.substring(5,7); var dag = tijd.substring(8,10); var uur =tijd.substring(11,14); var mnt = tijd.substring (14,16); if (i<=2) {if ((i<2)||(i==4)||(i==8)||(i==12)||(i==16)){html+='<div class=weathertile id='+(i*3)+'uur>'; html+='<div class=html+="col-xs-12" id="boventegel">';html+='<label>'+name+'</label><br/>'; html+='<img src="'+img+'"></div>'; html+='<div class="col-xs-6 ondertegel">'; html+=dag+'-'+maand+'-'+jaar+'</div>'; html+='<div class="col-xs-6 ondertegel">'; html+=temp+' °С</div>'; if (i==0) {document.getElementById('tileframe').innerHTML=html;}}}}}}}</script><div class="qx"><small><a href="http://www.bbwelcome2amsterdam.nl">bed and breakfast amsterdam on bbwelcome2amsterdam.nl</a></small></div>
+    </center>
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+</div>
+</body>
+</html>
+
+</head>
+<body>
