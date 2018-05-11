@@ -177,7 +177,6 @@ type Side1 struct {
 		Pressure int     `json:"pressure"`
 		Humidity int     `json:"humidity"`
 		Description int  `json:"description"`
-		Sys        Sys       `json:"sys"`
 
 
 		TempA    string
