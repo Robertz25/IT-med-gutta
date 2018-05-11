@@ -6,6 +6,8 @@ import (
 	"io/ioutil"
 	"encoding/json"
 	"html/template"
+
+
 )
 func main() {
 	http.HandleFunc("/1", Alesund)
