@@ -28,7 +28,7 @@ Rå API for Tromsø:
 
 API for Tromsø etter konvertering:
 
-![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/API%20konvertert%20.png?raw=true)
+![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/Skjermbilde%202018-05-11%20kl.%2018.01.35.png?raw=true)
 
 Vi har også lagt inn  en widget fra Weatherwidget.io i hver html side vi har og bilder fra de forskjellige stedene for å gjøre nettsiden estetisk bedre å se på og lettere å forstå.
 
