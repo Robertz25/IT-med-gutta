@@ -1,0 +1,68 @@
+<html>
+
+<head></head>
+
+<body>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    code {
+        font-size: 5em;
+        color: rgba(95%, 43%, 9%, 1);
+        text-align: center;
+        display: block;
+        position: relative;
+        top: 200px;
+        text-shadow: 0 0 35px rgba(95%, 43%, 9%, 1);
+        -webkit-animation: spin-360 5s infinite;
+        -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
+    }
+
+    code span {
+        color: rgba(100%, 100%, 100%, 1);
+    }
+
+    body {
+        background: #000;
+    }
+
+
+    .btn {
+        position: center;
+        display: block;
+        width: 250px;
+        margin: 20px auto;
+        padding: 10px;
+
+        background-color: #fff;
+        border: 1px solid #ccc;
+
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        transform-style: flat;
+        transition: all 250ms ease-out;
+
+
+
+
+
+    &:after {
+         content: "";
+         position: absolute;
+         z-index: -2;
+         transition: all 250ms ease-out;
+     }
+
+</style>
+<code>
+    {--
+    <span>No Location</span>--}
+</code>
+
+<center><a href="/home/" class="btn paper-raise">Home</a></center>
+
