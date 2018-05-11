@@ -35,9 +35,9 @@
 </head>
 <body>
 
-<button class="tablink" onclick="location.href='/1';" value="Alesund">Ålesund</button>
+<button class="tablink" onclick="location.href='/';" value="Alesund">Ålesund</button>
 <button class="tablink" onclick="openPage('Tromso', this, 'lightyellow')" id="defaultOpen">Tromsø</button>
-<button class="tablink" onclick="location.href='/3';" value="Stavanger">Stavanger</button>
+<button class="tablink" onclick="location.href='/2';" value="Stavanger">Stavanger</button>
 
 
 <div id="Tromso" class="tabcontent">
@@ -52,32 +52,41 @@
     <p><center>Luftfuktigheten er {{ .Main.Humidity }} %</center></p>
     <p><center>Vindhastigheten er {{ .Wind.Speed }} m/s</center></p>
     <p><center> Dagens melding: {{ .Main.TempB }} </center></p>
-    <center>
+
+    <center><input name="Søk" type="text" id="new-location" placeholder="Skriv din destinasjon">
+    <button type="submit" onclick="handleSearch()" class="btn btn-orange search"><i class=""></i>Søk</button>
+        <script>
+            function handleSearch(){
+                a= document.getElementById('new-location').value
+                console.log(a)
+                console.log("Yes")
+                window.location="/search/"+a
+            }
+        </script>
 
         <h2>Dette er her er populære steder å besøke i Tromsø</h2>
         <a href= "https://troms.dnt.no/" target="_blank" border="1" width="42" height="42" border="0" >
-        <img src="https://lh3.googleusercontent.com/99jtumy69PBhRwSnBa1IlcP4DCjTR5eVEvHVc_GjBVHw64FTZDEI1xxtjFcsNnMRi3blPurv3q8QuScI_Jrw_98LUeAOwvFrwWpieY02Pdc_D7kQD9RIOsSp0X-1KJQrXx-dCupoZPJzRZ97bn46mtj1ejax39EeDKU_cU4fDGSVRiCs_89IlqtjweZBDhh_a1PVgj2dA4UThvGPAKezeYGZOqGfgjrthpNydOkSNlMRpb5-CNiSL0wJPYCe4iFCvAWs05QRR6IGGhXu4M17RYJWqzZswdIKkiD2hYUPxUJC-UTD4yPw3gC6Y4p1liyKt0AdrZPAGQma38jx5yO2UEJpsZmNPzWA5Af2Muu7eeFANkaLsY1dvj5GsdfFKyQKtutfi2s9bz7HXGoIMhroC_GI3ZpEgXrnOw0mtsW__aW1JSQG2rQidCY8sXHBs-n_P9fYH4YADgCcw-TT4POqh5ZhqpLoe3lF9iES5gK3hgVSRjA6szV_R1LqUwEluOO6Z6soddFTXxkgLnh5bldukc4RBY7MJyi2ab-8qe3l4KibK-2-ZldxAr9UDx9zV4hWzfugxPx5PoMiHgXjHfkiMqdLiEV83aAqSXO75hQ=w1200-h300-no" width="1200" height="300">
+            <img src="https://lh3.googleusercontent.com/99jtumy69PBhRwSnBa1IlcP4DCjTR5eVEvHVc_GjBVHw64FTZDEI1xxtjFcsNnMRi3blPurv3q8QuScI_Jrw_98LUeAOwvFrwWpieY02Pdc_D7kQD9RIOsSp0X-1KJQrXx-dCupoZPJzRZ97bn46mtj1ejax39EeDKU_cU4fDGSVRiCs_89IlqtjweZBDhh_a1PVgj2dA4UThvGPAKezeYGZOqGfgjrthpNydOkSNlMRpb5-CNiSL0wJPYCe4iFCvAWs05QRR6IGGhXu4M17RYJWqzZswdIKkiD2hYUPxUJC-UTD4yPw3gC6Y4p1liyKt0AdrZPAGQma38jx5yO2UEJpsZmNPzWA5Af2Muu7eeFANkaLsY1dvj5GsdfFKyQKtutfi2s9bz7HXGoIMhroC_GI3ZpEgXrnOw0mtsW__aW1JSQG2rQidCY8sXHBs-n_P9fYH4YADgCcw-TT4POqh5ZhqpLoe3lF9iES5gK3hgVSRjA6szV_R1LqUwEluOO6Z6soddFTXxkgLnh5bldukc4RBY7MJyi2ab-8qe3l4KibK-2-ZldxAr9UDx9zV4hWzfugxPx5PoMiHgXjHfkiMqdLiEV83aAqSXO75hQ=w1200-h300-no" width="1200" height="300">
         </a>
     </center>
 
 
-<script>
-    function openPage(pageName,elmnt,color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+    <script>
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
         }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(pageName).style.display = "block";
-        elmnt.style.backgroundColor = color;
-    }
-    document.getElementById("defaultOpen").click();
-
-</script>
+        document.getElementById("defaultOpen").click();
+    </script>
 </div>
 </body>
 </html>
