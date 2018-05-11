@@ -191,17 +191,6 @@ type Side1 struct {
 
 }
 
-type Sys struct {
-	Type    float64 `json:type`
-	Id      float64 `json:id`
-	Message float64 `json:message`
-	Country string  `json:country`
-	Sunrise int64   `json:sunrise`
-	Sunset  int64   `json:sunset`
-}
-
-
-
 type Side2 struct {
 	Main struct {
 		Temp     float64 `json:"temp"`
