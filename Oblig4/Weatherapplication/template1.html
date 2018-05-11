@@ -1,0 +1,242 @@
+<style>
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    #new-location {
+        width: 350px;
+        height: 25px;
+        margin: 5px auto;
+        padding-left: 5px;
+        border-radius: 6px;
+        display: block;
+    }
+
+    #message {
+        color: #ffcc00;
+        -webkit-transition: color 0.3s ease-in-out;
+        -moz-transition: color 0.3s ease-in-out;
+        -o-transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #message:hover {
+        color: #003366;
+        cursor: pointer;
+    }
+
+    #container {
+        height: 400px;
+        width: 50%;
+        max-width: 1000px;
+        margin: 50px auto;
+        background-color: rgba(135, 135, 135, 0.5);
+        border-radius: 8px;
+        box-shadow: 3px 4px 8px #222;
+    }
+
+    #main-data {
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+
+    #weather-icon {
+        width: 60px;
+    }
+
+    #cur-temp {
+        font-size: 26px;
+    }
+
+    .left-table {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+    .search {
+        position: absolute;
+        left: 45%;
+        width: 8em;
+        text-align: center;
+        background-color: #f39c12;
+        border: none;
+        text-align: center;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+
+
+    .search:hover{
+        background:#fff;
+        box-shadow:0px 2px 10px 5px #97B1BF;
+        color:#000;
+    }
+
+    .search:after {
+        content: "";
+        background: #f1c40f;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+
+    .search:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+
+    .right-table {
+        width: 50%;
+        text-align: center;
+        float: right;
+    }
+
+    #menu-nav {
+        max-width: 1000px;
+        margin: 30px auto;
+        background-color: #ecf0f1;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #navigation-bar ul {
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    #navigation-bar li {
+        float: left;
+        width: 20%;
+    }
+
+    #navigation-bar li:hover a::before {
+        right: 0;
+        left: 0;
+    }
+
+    #navigation-bar a {
+        color: #848484;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px 0;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    #navigation-bar a:hover {
+        color: #e74c3c;
+    }
+
+    #navigation-bar a::before {
+        content: "";
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 2px;
+        background-color: #e74c3c;
+    }
+
+    #navigation-bar a:hover::before {
+        right: 0;
+        left: 0;
+    }
+
+    #navigation-bar span {
+        display: block;
+    }
+
+    #search-bar {
+        display: none;
+        border-bottom: 3px solid #e74c3c;
+        border-radius: 4px;
+    }
+
+    form {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 5%;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #e74c3c;
+        font: normal 300 18px "Roboto", sans-serif;
+        color: #888;
+        transition: box-shadow 0.5s ease;
+    }
+
+    input:focus,
+    input:active {
+        box-shadow: 0 0 10px #e74c3c;
+    }
+</style>
+    </div>
+
+</div>
+<center>
+
+<center><input name="search" type="text" id="new-location" placeholder="Søk etter by"></center>
+<center><button type="submit" onclick="handleSearch()" class="btn btn-orange search"><i class=""></i>Søk</button></center>
+<script>
+    function handleSearch(){
+        a= document.getElementById('new-location').value
+        console.log(a)
+        console.log("Yes")
+        window.location="/search/"+a
+    }
+</script>
+<section id="container">
+    <section class="weather-data">
+        <div id="main-data">
+            <img src="https://pbs.twimg.com/profile_images/720298646630084608/wb7LSoAc_400x400.jpg" id="weather-icon">
+            <span id="cur-temp"></span>
+            <h3 id="city-name"></h3>
+            <p id="message">{{.Name}}</p>
+
+            </p>
+        </div>
+        <button onclick="window.location.href='/1'">Hjemside</button>
+
+        <div class="weather-data">
+            <div class="left-table">
+                <p><center> Temperatur: <span id="w-descript">{{.Main.Temp }} °C</span>
+                <p><center>Luftfuktigheten er {{ .Main.Humidity }} %</center></p>
+                </p><p><center>Lufttrykket er {{ .Main.Pressure }} kPa</center></p></p>
+
+
+            </div>
+        </div>
+    </section>
+</section>
+</center>
