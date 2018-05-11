@@ -6,17 +6,30 @@ import (
 	"io/ioutil"
 	"encoding/json"
 	"html/template"
-
-
+	"github.com/parnurzeal/gorequest"
+	"fmt"
+	"errors"
 )
 func main() {
-	http.HandleFunc("/1", Alesund)
-	http.HandleFunc("/2", Tromso)
-	http.HandleFunc("/3", Stavanger)
+	http.HandleFunc("/", Alesund)
+	http.HandleFunc("/1", Tromso)
+	http.HandleFunc("/2", Stavanger)
+	http.HandleFunc("/search/", handlerSearch)
+	http.HandleFunc("/home/", handler)
+	http.HandleFunc("/page1/", handlerNav)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
 	}
+
+
+}
+func handler(w http.ResponseWriter, r *http.Request) {
+	d, err := getData("Oslo", w, r)
+	if err != nil {
+		return
+	}
+	render(w, d, "template1.html")
 }
 func Alesund (w http.ResponseWriter, r *http.Request) {
 
@@ -105,7 +118,7 @@ func Stavanger (w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	}
+}
 func MeldingAlesund () {
 
 	//Slipper å lage variabel for grader i celsius, der vi trekker fra fahrenheit, siden vi brukte units=metric, da vi hentet apien.
@@ -164,6 +177,7 @@ type Side1 struct {
 		Pressure int     `json:"pressure"`
 		Humidity int     `json:"humidity"`
 		Description int  `json:"description"`
+		Sys        Sys       `json:"sys"`
 
 
 		TempA    string
@@ -173,7 +187,21 @@ type Side1 struct {
 	} `json:"wind"`
 	ID int `json:"id"`
 	Name string `json:"name"`
+
+
 }
+
+type Sys struct {
+	Type    float64 `json:type`
+	Id      float64 `json:id`
+	Message float64 `json:message`
+	Country string  `json:country`
+	Sunrise int64   `json:sunrise`
+	Sunset  int64   `json:sunset`
+}
+
+
+
 type Side2 struct {
 	Main struct {
 		Temp     float64 `json:"temp"`
@@ -203,8 +231,55 @@ type Side3 struct {
 	} `json:"wind"`
 	ID int `json:"id"`
 	Name string `json:"name"`
+
+
 }
+
 
 var verdi1 Side1
 var verdi2 Side2
 var verdi3 Side3
+
+
+
+
+func getData(location string, w http.ResponseWriter, r *http.Request) (Side1, error) {
+	var d Side1
+	requestP1 := "http://api.openweathermap.org/data/2.5/weather?q="
+	requestP2 := "&APPID=12576bc04cecb325c71bbe3972592fa1&units=metric"
+	_, body, err := gorequest.New().Get(requestP1 + location + requestP2).End()
+	if err != nil {
+		log.Fatal("Error in request")
+	}
+	// fmt.Println("It is :", string(body))
+	errs := json.Unmarshal([]byte(body), &d)
+	if errs != nil {
+		render(w, d, "NotFound.html")
+		fmt.Fprintf(w, "<h1>Error in getting request from API</h1>")
+		return d, errors.New("Wrong request")
+	}
+	return d, nil
+}
+
+func handlerNav(w http.ResponseWriter, r *http.Request) {
+	d, err := getData(r.URL.Path[len("/search/"):], w, r)
+	if err != nil {
+		return
+	}
+	render(w, d, "template1.html")
+}
+
+func handlerSearch(w http.ResponseWriter, r *http.Request) {
+	d, err := getData(r.URL.Path[len("/search/"):], w, r)
+	if err != nil {
+		return
+	}
+	render(w, d, "template1.html")
+}
+func render(w http.ResponseWriter, d Side1, filename string) {
+	t, errr := template.ParseFiles(filename)
+	if errr != nil {
+		log.Fatal("Error in parsing tempalte")
+	}
+	t.Execute(w, d)
+}
