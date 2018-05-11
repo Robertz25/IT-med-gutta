@@ -16,7 +16,7 @@ Nederst på siden har vi lagt inn et bilde fra kjente plasser på de forskjellig
 
 Bilde av hvordan nettsiden ser ut:
 
-![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/Ålesund.jpg?raw=true)
+![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/Alesund.jpg)
 
 ## Systemarkitektur ##
 
