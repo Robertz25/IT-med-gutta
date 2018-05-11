@@ -37,3 +37,5 @@ Vi har også lagt inn  en widget fra Weatherwidget.io i hver html side vi har og
 [Weatherapplication, main.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Weatherapplication/main.go)
 
 [Weatherapplication folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Weatherapplication)
+
+[Bilder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Bilder)
