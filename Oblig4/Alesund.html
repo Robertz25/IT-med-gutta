@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+        .tablink {
+            background-color: blue;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 18px 16px;
+            font-size: 17px;
+            width: 33.333%;
+        }
+        .tablink:hover {
+            background-color: whitesmoke;
+        }
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+        #Alesund {background-color: dodgerblue;}
+    </style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Alesund', this, 'cornflowerblue')" id="defaultOpen">Ålesund</button>
+<button class="tablink" onclick="location.href='/2';" value="Trosmo">Tromsø</button>
+<button class="tablink" onclick="location.href='/3';" value="Stavanger">Stavanger</button>
+
+
+
+<div id="Alesund" class="tabcontent">
+    <h1><center><font color="#ffd700"> Værmelding  {{ .Name }}</font></center></h1>
+    <p><center> Temperatur {{ .Main.Temp }}°C Grader </center></p>
+    <p><center>Lufttrykket er {{ .Main.Pressure }} kPa</center></p>
+    <p><center>Luftfuktigheten er {{ .Main.Humidity }} %</center></p>
+    <p><center>Vindhastigheten er {{ .Wind.Speed }} m/s</center></p>
+    <p><center> Dagens melding: {{ .Main.TempA }} </center></p>
+    <center>
+        <a href="https://www.accuweather.com/no/no/alesund/253879/weather-forecast/253879" class="aw-widget-legal">
+        </a><div id="awcc1525975061862"
+                 class="aw-widget-current"
+                 data-locationkey="253879"
+                 data-unit="c" data-language="no"
+                 data-useip="false" data-uid="awcc1525975061862">
+
+    </div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+
+
+</center>
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+</body>
+</html>
