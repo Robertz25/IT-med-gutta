@@ -14,9 +14,9 @@ Byene vi har valgt å sammenligne er Ålesund, Tromsø og Stavanger. Vi tenkte d
 ## Systemarkitektur ##
 
 Applikasjonen vår består av en webserver som henter API fra Openweathermap og gjør dataen om til lettleselig tekst som er enkelt for brukeren å forstå. Stedene vi henter data fra er Tromsø, Ålesund og Stavanger.
-![API'en før kovertering](IT-med-gutta/Oblig4/Bilder/API eksempel.png)
+![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/API%20eksempel.png?raw=true)
 
-![API'en etter kovertering](IT-med-gutta/Oblig4/Bilder/API konvertert .png)
+![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/API%20konvertert%20.png?raw=true)
 
 Vi har også lagt inn en widget fra Weatherwidget.io og bilder fra de forskjellige stedene for å gjøre siden estetisk bedre å se på og lettere å forstå. Når vi henter data fra API'ene vil 
 **Link til oppgaven**
