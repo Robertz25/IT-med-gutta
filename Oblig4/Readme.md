@@ -41,7 +41,8 @@ Vi har også lagt inn  en widget fra Weatherwidget.io i hver html side vi har og
 
 [Bilder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Bilder)
 
-Dersom man søker etter by i searchbaren og byen ikke eksisterer eller ikke er i Apiet etc, skal dette komme opp, men vi endret på noe og det virker ikke helt som det skal:
+Hvis du skriver inn for eksempel China i searchbaren, vil siden "no location" komme opp.
 
 ![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/ByFinnesIkke.png)
 
+Dersom man søker etter by i searchbaren og byen ikke eksisterer eller ikke er i Apiet etc, skal dette komme opp, men vi endret på noe og det virker ikke helt som det skal.
