@@ -16,6 +16,7 @@ Byene vi har valgt å sammenligne er Ålesund, Tromsø og Stavanger. Vi tenkte d
 Applikasjonen vår består av en webserver som henter API fra Openweathermap og gjør dataen om til lettleselig tekst som er enkelt for brukeren å forstå. Stedene vi henter data fra er Tromsø, Ålesund og Stavanger.
 
 Rå API for Tromsø:
+
 ![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/jsonApiTromso.png?raw=true)
 
 API for Tromsø etter konvertering:
