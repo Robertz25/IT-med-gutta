@@ -28,5 +28,6 @@ Vi har også lagt inn en widget fra Weatherwidget.io og bilder fra de forskjelli
 
 **Link til oppgaven**
 
-[Link til applikasjonen](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Weatherapplication/main.go)
-[Link til folderen](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Weatherapplication)
+[Weatherapplication, main.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Weatherapplication/main.go)
+
+[Weatherapplication folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Weatherapplication)
