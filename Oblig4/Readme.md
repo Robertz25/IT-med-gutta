@@ -32,10 +32,15 @@ API for Tromsø etter konvertering:
 
 Vi har også lagt inn  en widget fra Weatherwidget.io i hver html side vi har og bilder fra de forskjellige stedene for å gjøre nettsiden estetisk bedre å se på og lettere å forstå.
 
-**Link til oppgaven**
+**Linker**
 
 [Weatherapplication, main.go](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Weatherapplication/main.go)
 
 [Weatherapplication folder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Weatherapplication)
 
 [Bilder](https://github.com/Robertz25/IT-med-gutta/tree/master/Oblig4/Bilder)
+
+Dersom man søker etter by i searchbaren og byen ikke eksisterer eller ikke er i Apiet etc, skal dette komme opp, men vi endret på noe og det virker ikke helt som det skal:
+
+![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/Search_ByfinnesIkke.png)
+
