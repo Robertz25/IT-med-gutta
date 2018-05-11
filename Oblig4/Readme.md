@@ -23,7 +23,8 @@ API for Tromsø etter konvertering:
 
 ![Alt text](https://github.com/Robertz25/IT-med-gutta/blob/master/Oblig4/Bilder/API%20konvertert%20.png?raw=true)
 
-Vi har også lagt inn en widget fra Weatherwidget.io og bilder fra de forskjellige stedene for å gjøre siden estetisk bedre å se på og lettere å forstå. Når vi henter data fra API'ene vil 
+Vi har også lagt inn en widget fra Weatherwidget.io og bilder fra de forskjellige stedene for å gjøre nettsiden estetisk bedre å se på og lettere å forstå.
+
 **Link til oppgaven**
 
 "link til oppgaven her"
