@@ -35,8 +35,8 @@
 <body>
 
 <button class="tablink" onclick="openPage('Alesund', this, 'lightyellow')" id="defaultOpen">Ålesund</button>
-<button class="tablink" onclick="location.href='/2';" value="Trosmo">Tromsø</button>
-<button class="tablink" onclick="location.href='/3';" value="Stavanger">Stavanger</button>
+<button class="tablink" onclick="location.href='/1';" value="Trosmo">Tromsø</button>
+<button class="tablink" onclick="location.href='/2';" value="Stavanger">Stavanger</button>
 
 
 
@@ -53,6 +53,17 @@
     <p><center>Vindhastigheten er {{ .Wind.Speed }} m/s</center></p>
     <p><center> Dagens melding: {{ .Main.TempA }} </center></p>
     <center>
+        <input name="Søk" type="text" id="new-location" placeholder="Skriv din destinasjon">
+        <button type="submit" onclick="handleSearch()" class="btn btn-orange search"><i class=""></i>Søk</button>
+        <center>
+            <script>
+                function handleSearch(){
+                    a= document.getElementById('new-location').value
+                    console.log(a)
+                    console.log("Yes")
+                    window.location="/search/"+a
+                }
+            </script>
         <h2>Dette er her er populære steder å besøke i Ålesund</h2>
         <a href= "https://aast.dnt.no/" target="_blank" border="1" width="42" height="42" border="0" >
             <img src="https://lh3.googleusercontent.com/WJMpdx3m8mDG093M_ugx1hbSN4g35GOyDGTcQuibQS_Sn1KC2IXQuq6ceR3LEFocO1BguYp22frl8f3ggsNlwfNLSgZqreljK2apsdV3HfQqcax8l_sptmkCqh3_37pJii4m9jszSAeFdWwWYKeqTsoJPG65AtZXTily6apjp6s8nyUtYhL4cHkMIz4nYBMcGKkFV40a61GR0zelUN7SN3i_jSVt8FpUUB3YpaPAARxYHrUdibbvjz5UmGgiFM8dmrmFpFAXlSGCQgwHs_BY8RWoy4KZpL6dRhSRdHNPgG-kxdDqRb0xxe2bB5sx9uIwQ18hZGUwM6Ob3wWjiJSg_6ZO-lQ33OJulmdY90MwubVdEhw9syhZqCB-AQLJfQ2nfVuzUpCoCqWj7cqrV1GEr-FICkrE278KWAnBUaZ1KUIP0Qr0gICylH-SSAob6GuKh-X41SxcreDxWG_DxwiN9cYgiCUZlQOjKhifD0ebnZJ6kjq_AiJHmCMwtPcvfcgzZq-TKdBVpBFrAhLDOsg3QLvIgCUFqBAY8wLqrctsTIxzkHs50tEF-V2IchbRtNFGx8nQuecaClre9kOqjFrUCdBBpJpaP-wa8uG8eqY=w1200-h300-no" width="1200" height="300"></a>
@@ -60,22 +71,22 @@
 
 
     </center>
-<script>
-    function openPage(pageName,elmnt,color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+    <script>
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
         }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(pageName).style.display = "block";
-        elmnt.style.backgroundColor = color;
-    }
-    document.getElementById("defaultOpen").click();
-</script>
+        document.getElementById("defaultOpen").click();
+    </script>
 
 </div>
 </body>
